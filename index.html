@@ -1,0 +1,49 @@
+---
+layout: default
+title: Tags
+permalink: /tags/
+---
+
+<main class="tags-page">
+
+    <h1 class="page-title">Explore by Tags</h1>
+
+    <p class="intro">
+        Browse articles by topics and ideas.
+    </p>
+
+    {% assign sorted_tags = site.tags | sort %}
+
+    {% for tag in sorted_tags %}
+
+    <section class="tag-section" id="{{ tag[0] | slugify }}">
+
+        <h2>{{ tag[0] }}</h2>
+
+        {% assign tag_posts = tag[1] | sort: "date" | reverse %}
+
+        {% for post in tag_posts %}
+
+        <article class="article">
+
+            <div class="article-meta">
+                {{ post.date | date: "%B %-d, %Y" }}
+            </div>
+
+            <h3>
+                <a href="{{ post.url | relative_url }}">
+                    {{ post.title }}
+                </a>
+            </h3>
+
+            <p>{{ post.excerpt | strip_html }}</p>
+
+        </article>
+
+        {% endfor %}
+
+    </section>
+
+    {% endfor %}
+
+</main>
