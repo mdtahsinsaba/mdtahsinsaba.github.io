@@ -1,0 +1,114 @@
+---
+layout: default
+title: All Articles
+permalink: /articles/
+---
+
+<main class="articles-page">
+
+    <h1 class="page-title">All Articles</h1>
+
+    <p class="intro">
+        All my writings on economics, public policy,
+        society, books and other subjects.
+    </p>
+
+    <div id="all-articles-list">
+
+        {% for post in site.posts %}
+
+        <article class="article">
+
+            <div class="article-meta">
+                {{ post.date | date: "%B %-d, %Y" }}
+            </div>
+
+            <h2>
+                <a href="{{ post.url | relative_url }}" style="color: inherit; text-decoration: none;">
+                    {{ post.title }}
+                </a>
+            </h2>
+
+            <p>
+                {{ post.excerpt | strip_html | truncate: 220 }}
+            </p>
+
+            <a href="{{ post.url | relative_url }}" class="read-more">
+                Read article →
+            </a>
+
+        </article>
+
+        {% endfor %}
+
+    </div>
+
+    <nav id="all-articles-pagination"
+         aria-label="All articles pagination"
+         style="display:flex; justify-content:center; align-items:center; gap:10px; margin-top:40px; flex-wrap:wrap;">
+    </nav>
+
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const articles = Array.from(
+        document.querySelectorAll("#all-articles-list .article")
+    );
+
+    const pagination = document.getElementById("all-articles-pagination");
+
+    const perPage = 4;
+    const totalPages = Math.ceil(articles.length / perPage);
+
+    function showPage(page) {
+
+        articles.forEach(function (article, index) {
+            const start = (page - 1) * perPage;
+            const end = start + perPage;
+
+            article.style.display =
+                index >= start && index < end ? "" : "none";
+        });
+
+        pagination.innerHTML = "";
+
+        if (totalPages <= 1) return;
+
+        function addButton(label, pageNumber, active, disabled) {
+
+            const button = document.createElement("button");
+
+            button.textContent = label;
+            button.type = "button";
+            button.disabled = disabled;
+
+            button.style.cssText =
+                "padding:7px 12px; border:1px solid #dedbd5;" +
+                "background:" + (active ? "#242424" : "transparent") + ";" +
+                "color:" + (active ? "#fff" : "#242424") + ";" +
+                "border-radius:4px; cursor:pointer; font:inherit;";
+
+            button.addEventListener("click", function () {
+                if (disabled) return;
+                showPage(pageNumber);
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+
+            pagination.appendChild(button);
+        }
+
+        addButton("Previous", page - 1, false, page === 1);
+
+        for (let i = 1; i <= totalPages; i++) {
+            addButton(String(i), i, i === page, false);
+        }
+
+        addButton("Next", page + 1, false, page === totalPages);
+    }
+
+    showPage(1);
+
+});
+</script>
