@@ -1,3 +1,7 @@
+/* =========================================
+   1. ROOT VARIABLES & RESET
+========================================= */
+
 :root {
     --background: #faf9f6;
     --text: #242424;
@@ -19,16 +23,28 @@ body {
 }
 
 
-/* 2. Header and navigation */
+/* =========================================
+   2. HEADER & NAVIGATION
+========================================= */
 
 header {
     max-width: 850px;
     margin: auto;
-    padding: 35px 25px;
+    padding: 20px 25px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+
+    /* Sticky header */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    /* Header appearance */
+    background: var(--background);
+    border-bottom: none;
 }
 
 .logo {
@@ -40,7 +56,8 @@ header {
     white-space: nowrap;
 }
 
-/* Tahsin logo */
+
+/* Tahsin Logo */
 
 .logo.logo-brand {
     display: inline-flex;
@@ -74,6 +91,7 @@ header {
     filter: none;
 }
 
+
 /* Navigation */
 
 header nav {
@@ -95,7 +113,9 @@ header nav a:hover {
 }
 
 
-/* 3. Main content */
+/* =========================================
+   3. MAIN CONTENT
+========================================= */
 
 main {
     max-width: 850px;
@@ -104,7 +124,9 @@ main {
 }
 
 
-/* 4. Homepage introduction */
+/* =========================================
+   4. HOMEPAGE INTRODUCTION
+========================================= */
 
 .intro {
     margin-bottom: 65px;
@@ -125,7 +147,9 @@ main {
 }
 
 
-/* 5. Article listings */
+/* =========================================
+   5. ARTICLE LISTINGS
+========================================= */
 
 .article {
     padding: 32px 0;
@@ -168,7 +192,9 @@ main {
 }
 
 
-/* 6. Blog, Economics and All Articles pages */
+/* =========================================
+   6. BLOG, ECONOMICS & ARTICLES PAGES
+========================================= */
 
 .blog-page,
 .econ-page,
@@ -189,7 +215,9 @@ main {
 }
 
 
-/* 7. About page */
+/* =========================================
+   7. ABOUT PAGE
+========================================= */
 
 .about-page {
     margin-top: 60px;
@@ -205,7 +233,9 @@ main {
 }
 
 
-/* 8. Tags page */
+/* =========================================
+   8. TAGS PAGE
+========================================= */
 
 .tags-page {
     margin-top: 60px;
@@ -227,7 +257,9 @@ main {
 }
 
 
-/* 9. Individual article page */
+/* =========================================
+   9. INDIVIDUAL ARTICLE PAGE
+========================================= */
 
 .article-page {
     max-width: 700px;
@@ -295,7 +327,9 @@ main {
 }
 
 
-/* 10. Featured image */
+/* =========================================
+   10. FEATURED IMAGE
+========================================= */
 
 .featured-image {
     margin: 25px 0;
@@ -308,7 +342,9 @@ main {
 }
 
 
-/* 11. Article tags */
+/* =========================================
+   11. ARTICLE TAGS
+========================================= */
 
 .article-extras {
     border-top: 1px solid var(--line);
@@ -339,7 +375,9 @@ main {
 }
 
 
-/* 12. Footer */
+/* =========================================
+   12. FOOTER
+========================================= */
 
 footer {
     border-top: 1px solid var(--line);
@@ -377,13 +415,23 @@ footer p {
 }
 
 
-/* 13. Mobile responsiveness */
+/* =========================================
+   13. MOBILE RESPONSIVENESS
+========================================= */
 
 @media (max-width: 600px) {
 
+    /* Mobile Sticky Header */
+
     header {
-        padding: 25px 20px;
+        padding: 18px 20px;
         gap: 12px;
+
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+
+        background: var(--background);
     }
 
     .logo {
@@ -456,7 +504,11 @@ footer p {
     }
 
 }
-/* Final Tahsin logo positioning */
+
+
+/* =========================================
+   14. FINAL TAHSiN LOGO POSITIONING
+========================================= */
 
 header a.logo.logo-brand {
     display: inline-flex !important;
