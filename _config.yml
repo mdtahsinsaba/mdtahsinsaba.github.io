@@ -1,0 +1,28 @@
+title: "Tahsin"
+description: "Thoughts, ideas and observations on economics, public policy, society and books."
+
+url: "https://gi1864.github.io"
+baseurl: ""
+
+permalink: /:categories/:title/
+
+markdown: kramdown
+highlighter: rouge
+
+timezone: Asia/Kolkata
+
+plugins:
+  - jekyll-paginate
+
+paginate: 4
+paginate_path: "/page/:num/"
+
+include:
+  - index.html
+  - blog.html
+  - about.html
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
