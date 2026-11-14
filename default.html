@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% if page.title and page.title != site.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | escape }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}?v=6">
+</head>
+
+<body>
+
+    <header>
+
+        <a href="{{ '/' | relative_url }}" class="logo logo-brand">
+            <span class="logo-word">Tahsin</span>
+
+            <svg class="logo-ribbons"
+                 viewBox="0 0 180 34"
+                 xmlns="http://www.w3.org/2000/svg"
+                 aria-hidden="true">
+
+                <path
+                    d="M2 3 C48 28, 116 -5, 178 12 C126 5, 65 39, 2 3Z"
+                    fill="#FF9933"/>
+
+                <path
+                    d="M10 15 C62 39, 120 2, 178 20 C125 12, 66 43, 10 15Z"
+                    fill="#138808"/>
+
+            </svg>
+        </a>
+
+        <nav>
+            <a href="{{ '/econ/' | relative_url }}">Econ</a>
+            <a href="{{ '/blog/' | relative_url }}">Blog</a>
+            <a href="{{ '/about/' | relative_url }}">About</a>
+        </nav>
+
+    </header>
+
+    {{ content }}
+
+    <footer>
+
+        <p>Find me around the internet</p>
+
+        <div class="social-links">
+
+            <a href="https://x.com/mdtahsinsaba"
+               target="_blank"
+               rel="noopener noreferrer">Twitter / X</a>
+
+            <a href="https://www.instagram.com/mdtahsinsaba"
+               target="_blank"
+               rel="noopener noreferrer">Instagram</a>
+
+        </div>
+
+        <div class="copyright">
+            © Md Tahsin Saba
+        </div>
+
+    </footer>
+
+</body>
+</html>
