@@ -10,7 +10,7 @@ tags: ["Blog"]
 <figure>
   <img src="/assets/images/movie-image.jpeg"
        alt="The Wild Robot"
-       style="width:100%; max-width:100%; height:auto;">
+       style="width:100%; max-width:100%; height:auto; filter:greyscale(100%); "> 
 </figure>
 
 It's 2.03 am midnight; I want to sleep early. I want to fix my sleep cycle; I've been trying to sleep for the past 2 and a half hours but couldn't. I don't know what's going on in my mind right now. Too many thoughts are passing by, and nothing is clear; it makes it complicated. I grabbed my phone to write it all but can't write any of it. Perhaps sometimes I can't comprehend my own thoughts. but I will try...
