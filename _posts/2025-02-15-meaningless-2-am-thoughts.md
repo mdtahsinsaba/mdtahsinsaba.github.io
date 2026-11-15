@@ -19,7 +19,7 @@ Sometimes I start to think about the characters of the movies I watched recently
 
 Recently I watched a movie, *The Wild Robot*. Some of the scenes of the movie are hitting me in my mind right now. It's a science fiction animated movie based on a novel of the same name. A robot named Roz falls onto an island where a variety of wildlife are residing. Accidentally, Roz kills a nesting goose, and she finds an egg there. Takes on the task of adopting the orphaned gosling, whom she names Brightbill. After spending some time together, Roz, Brightbill, and a fox named Fink feel attached to each other. They trained Brightbill for the winter migration. Roz develops an emotional feeling for Brightbill; she doesn't communicate it to her. When Brightbill leaves for the winter migration, Roz misses Brightbill badly. She was sitting alone on the high edge of the bank of the sea.
 
-I don't know why this scene is stuck in my mind right now. Please bear with me. But there is a thing that, sometimes, when a thought keeps repeating in your mind, writing it down can help you get it out of your head and stop overthinking about it. let see
+I don't know why this scene is stuck in my mind right now. Please bear with me. But there is a thing that, sometimes, when a thought keeps repeating in your mind, writing it down can help you get it out of your head and stop overthinking about it. let's see
 
 But still, so many things are hitting me in my mind. I'll try to sleep again now.
 
