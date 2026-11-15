@@ -10,7 +10,7 @@ permalink: /blog/
 
     <div id="article-list">
 
-        {% assign blog_posts = site.posts | where_exp: "post", "post.categories contains 'blog'" | sort: "date" | reverse %}
+        {% assign blog_posts = site.posts | where_exp: "post", "post.categories contains 'Blog'" | sort: "date" | reverse %}
 
         {% for post in blog_posts %}
 
