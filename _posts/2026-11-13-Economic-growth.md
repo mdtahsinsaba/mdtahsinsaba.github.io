@@ -2,7 +2,7 @@
 layout: post
 title: "Economic growth"
 excerpt: "" 
-date: 2026-11-13T:20:30:00 +0530
+date: 2026-11-13 20:30:00 +0530
 category:
   - econ
 ---
